@@ -68,10 +68,10 @@ body {
   background-color: var(--color-primary);
   font-size: 1.6rem;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 300;
   border: none;
-  padding: 1.25rem 4.5rem;
-  border-radius: 10rem;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -495,7 +495,6 @@ h4 {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
   background-color: #888;
   opacity: 1;
 }
@@ -631,7 +630,7 @@ h4 {
 }
 
 /* MODAL WINDOW */
-modal {
+.Modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -683,7 +682,7 @@ modal {
 }
 
 .modal__form button {
-  grid-column: 1 / span 2;
+  /* grid-column: 1 / span 2; */
   justify-self: center;
   margin-top: 1rem;
 }
@@ -715,4 +714,35 @@ modal {
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
+}
+@media screen and (max-width: 600px) {
+  .Modal {
+   /* max-width: 40rem; */
+  }
+  
+.modal__header {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+
+
+.modal__form label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.modal__form input {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+}
+
+.modal__form button {
+  /* grid-column: 1 / span 2; */
+  justify-self: center;
+  margin-top: 0.5rem;
+  padding: 10px 15px;
+}
 }

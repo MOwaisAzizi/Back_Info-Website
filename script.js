@@ -1,6 +1,6 @@
 'use strict';
 let header = document.querySelector('.header')
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.Modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelector('.btn--show-modal');
