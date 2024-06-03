@@ -49,7 +49,10 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-
+document.querySelector('.next').addEventListener('click',function(){
+  alert('Yor Rejestered successfully!');
+  
+})
 
 const tabsContainer = document.querySelector('.operations__tab-container')
 const tabs = document.querySelectorAll('.operations__tab')
