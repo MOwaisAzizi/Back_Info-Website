@@ -11,7 +11,6 @@ const tabcontent = document.querySelectorAll('.operations__content');
 const tab = document.querySelectorAll('.operations__tab')
 const nav = document.querySelector('nav')
 
-
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
 
@@ -20,15 +19,10 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
   }
 })
 
-
 btnScrollTo.addEventListener('click', function () {
 
   section1.scrollIntoView({ behavior: 'smooth' })
 })
-
-
-
-
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -49,9 +43,8 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
-document.querySelector('.next').addEventListener('click',function(){
+document.querySelector('.next').addEventListener('click', function () {
   alert('Yor Rejestered successfully!');
-  
 })
 
 const tabsContainer = document.querySelector('.operations__tab-container')
@@ -70,7 +63,6 @@ tabsContainer.addEventListener('click', function (e) {
   tabsContent.forEach(el => el.classList.remove('operations__content--active'))
   document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations__content--active')
 })
-
 
 const NavactiveHandler = (e, opacity) => {
   if (e.target.classList.contains('nav__link')) {
@@ -105,7 +97,6 @@ const headerobsever = new IntersectionObserver(stickyNav, {
 })
 headerobsever.observe(header)
 
-
 const reavelSetion = (entries, observe) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
@@ -113,6 +104,7 @@ const reavelSetion = (entries, observe) => {
   //dont request after all revealed
   observe.unobserve(entry.target)
 }
+
 const sections = document.querySelectorAll('.section')
 const sectionobserver = new IntersectionObserver(reavelSetion, {
   root: null,
@@ -122,7 +114,6 @@ sections.forEach(section => {
   sectionobserver.observe(section)
   section.classList.add('section--hidden')
 })
-
 
 const revealImages = (entries, observe) => {
   const [entry] = entries;
@@ -139,9 +130,6 @@ images.forEach(img => {
   imgObserver.observe(img)
 })
 
-
-
-
 //slider
 const slide = function () {
   const slider = document.querySelector('.slider')
@@ -150,11 +138,9 @@ const slide = function () {
   const btnRight = document.querySelector('.slider__btn--right')
   const dotsCountainer = document.querySelector('.dots')
 
-
   const activateDots = (slide) => {
     document.querySelectorAll('.dots__dot').forEach(dot => dot.classList.remove('dots__dot--active'))
     document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active')
-
   }
   const createDots = () => {
     slides.forEach((_, i) => {
